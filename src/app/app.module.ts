@@ -11,6 +11,10 @@ import { HomeComponent } from './Components/home/home.component';
 import { ListCategoriesComponent } from './Components/list-categories/list-categories.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { NotFoundComponent } from './Components/not-found/not-found.component';
+import { ProducModule } from './Features/product/product.module';
+import { FilterProductPipe } from './pipe/filter-product.pipe';
+import { ProductComponent } from './Components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { HighlightDirective } from './highlight.directive';
     HomeComponent,
     ListCategoriesComponent,
     FilterPipe,
-    HighlightDirective
+    HighlightDirective,
+    NotFoundComponent,
+    
+
+  
   ],
   imports: [
     BrowserModule,

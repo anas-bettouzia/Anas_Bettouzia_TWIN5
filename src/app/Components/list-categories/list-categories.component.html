@@ -2,11 +2,11 @@
     <div class="row">
         Search : <input class="form-control"
         style ="margin-bottom:30px" name="title" [(ngModel)]="title">
-      <div *ngFor="let c of categories | filter:title" class="col-md-4" style="margin-bottom: 20px;">
+      <div *ngFor="let c of categories | filter:title" class="col-md-4" style="margin-bottom: 20px; "appHighlight>
         <!-- <div *ngIf="title.toLowerCase() ==c.title.toLowerCase() || title == '' "> -->
-        <img [src]="c.image" [alt]="c.title" class="img-fluid h-50 w-75" (click)="afficherDescription(c.id)">
+        <img [src]="c.image" [alt]="c.title" class="img-fluid h-50 w-75" (click)="afficherDescription(c.id)" >
         <h3>{{c.title | uppercase}}</h3>
-        <button class="btn btn-primary" *ngIf="c.available==true">Voir produits</button>
+        <button class="btn btn-primary" *ngIf="c.available==true" [routerLink]="['/product', c.id]">Voir produits</button>
         <p *ngIf="c.available == false">Categorie non disponible</p>
        <!-- </div> -->
       </div>

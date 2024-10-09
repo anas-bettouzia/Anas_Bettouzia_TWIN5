@@ -4,4 +4,5 @@ export class Categorie{
     image!:string;
     description !: string;
     available !: boolean;
+
 }
